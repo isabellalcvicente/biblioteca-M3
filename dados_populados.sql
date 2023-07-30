@@ -68,3 +68,41 @@ INSERT INTO bibliotecam3.autores(qtd_livros, id_pessoa)
         ('2','10'),
         ('8','5');
 SELECT * FROM autores;
+
+INSERT INTO bibliotecam3.generos(genero)
+	VALUES 
+		('ação'),
+        ('aventura'),
+        ('suspense'), 
+        ('drama'),
+        ('terror'),
+        ('juvenil'),
+        ('teen');
+SELECT * FROM generos;
+
+INSERT INTO bibliotecam3.editoras(empresa,cnpj,telefone,email)
+	VALUES 
+		('Next Page', '8700827', '40028922', 'nextpage@editora.com'),
+        ('Maio', '9272234', '87762346', 'maio@editora.com'),
+        ('NotBook', '2848235', '34428953', 'notbook@editora.com'), 
+        ('Tela azul ', '8983657', '37575843', 'telaazul@editora.com'),
+        ('Amigos e livros', '728900', '34789856', 'amigoselivros@editora.com');
+SELECT * FROM editoras;
+
+INSERT INTO bibliotecam3.livros(titulo, ano, qtd_paginas, isbn, idioma, diponibilidade,id_autor,id_genero,id_editora)
+	VALUES
+		('O iluminado', '1977-01-28', '87872845', 'EN', '0', '1', '3', '5'), 
+        ('Capivaras Amigas', '1999-05-15', '87937475', 'PT', '0', '2', '2', '4'), 
+        ('O grande NÃO', '2012-08-28', '8193781', 'PT', '0', '3', '1', '3'), 
+        ('Apenas vida', '2003-11-12', '9243756', 'EN', '0', '4', '5', '2'), 
+        ('Andando reto', '2005-02-18', '87872845', 'NO', '0', '5', '4', '1'); 
+SELECT * FROM editoras;
+
+INSERT INTO bibliotecam3.emprestimos(data_emprestimo, data_devolucao, id_usuario, id_livro, id_funcionario)
+	VALUES
+		('2023-06-25', '2023-07-25', '1', '1','1'),
+		('2023-05-12', '2023-05-12', '2', '2','1'),
+        ('2023-04-05', '2023-05-05', '3', '3','1'),
+        ('2023-05-20', '2023-06-20', '4', '4','1'),
+        ('2023-06-16', '2023-07-16', '5', '5','1');
+SELECT * FROM emprestimos;
