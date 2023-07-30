@@ -36,3 +36,10 @@ CREATE TABLE if not exists `funcionarios` (
     `id_pessoa` INT, 
 	 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa) ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+CREATE TABLE if not exists `autores` (
+    `id_autor` INT PRIMARY KEY  NOT NULL AUTO_INCREMENT ,
+    `qtd_livros` INT,
+    `id_pessoa` INT,
+	 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa) ON UPDATE CASCADE ON DELETE CASCADE
+);
