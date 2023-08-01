@@ -42,7 +42,6 @@ CREATE TABLE if not exists `autores` (
     `qtd_livros` INT,
     `id_pessoa` INT,
 	 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa) ON UPDATE CASCADE ON DELETE CASCADE
-<<<<<<< HEAD
 );
 
 CREATE TABLE if not exists `generos` (
@@ -65,7 +64,7 @@ CREATE TABLE if not exists `livros` (
     `qtd_paginas` INT,
     `ISBN` INT,
     `idioma` VARCHAR(2),
-    `disponibilidade` BIT NOT NULL,
+    `disponibilidade` tinyint(1),
     `id_autor` INT,
 	FOREIGN KEY (id_autor) REFERENCES autores(id_autor) ON UPDATE CASCADE ON DELETE CASCADE,
     `id_genero` INT,
@@ -85,6 +84,4 @@ CREATE TABLE if not exists `emprestimos` (
   FOREIGN KEY (id_livro) REFERENCES livros(id_livro) ON UPDATE CASCADE ON DELETE CASCADE,
   `id_funcionario` int,
   FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id_funcionario) ON UPDATE CASCADE ON DELETE CASCADE
-=======
->>>>>>> d074fd26f45d3b9dc0a68d23b7540cd81f427c79
 );
