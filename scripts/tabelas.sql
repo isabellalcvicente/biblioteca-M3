@@ -1,9 +1,14 @@
 CREATE database if not exists bibliotecaM3;
+--criando a database
 use bibliotecaM3;
+--usando a database
 
 CREATE TABLE if not exists `enderecos` (
+--criando a tabela se ela não existir
     `id_endereco` INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+--auto increment para continuar gerando id's automaticos 
     `rua` VARCHAR(100),
+--varchar com limitação de 100 caracteres 
     `n_casa` INT,
     `cep` INT,
     `complemento` VARCHAR(100)
@@ -20,6 +25,7 @@ CREATE TABLE if not exists `pessoas` (
     `nasc` DATE,
     `id_endereco` INT,
     FOREIGN KEY (id_endereco) REFERENCES enderecos(id_endereco) ON UPDATE CASCADE ON DELETE CASCADE
+--puxando as informações da tabela endereço 
 );
 
 CREATE TABLE if not exists `usuarios` (
@@ -47,6 +53,7 @@ CREATE TABLE if not exists `autores` (
 CREATE TABLE if not exists `generos` (
   `id_genero` int PRIMARY KEY  NOT NULL AUTO_INCREMENT,
   `genero` enum ('acao', 'aventura ', 'suspense', 'drama', 'terror', 'juvenil', 'teen')
+-- usado enum para facilitar e limitar quais são os generos
 );
 
 CREATE TABLE if not exists `editoras` (

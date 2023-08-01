@@ -18,6 +18,7 @@ INSERT INTO bibliotecam3.enderecos(rua,n_casa,cep,complemento)
            ('Rua João Marques dos Santos', '2356', '83601755', 'casa');
            
 select * from enderecos;
+--mostra a tabela populada
 
 
 INSERT INTO bibliotecam3.pessoas(nome, email, cpf, telefone, nasc, id_endereco) 
