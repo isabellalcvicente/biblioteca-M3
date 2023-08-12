@@ -1,3 +1,5 @@
+-- https://dbdiagram.io/d/64bec6e602bd1c4a5e9d3620 link dbdiagram
+
 CREATE database if not exists bibliotecaM3;
 -- criando a database
 use bibliotecaM3;
